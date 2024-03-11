@@ -1,29 +1,18 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
+[project]
 name = "hentestpackage"
-version = "0.0.3"
-packages = ["hentestpackage"]
-description = "Test"
-include_package_data = true
-url = "https://github.com/henriquegmendes/tes-python-package/"
-author = "Henrique Mendes"
-author_email = "henrique.gmendes@hotmail.com"
-classifiers = [
-    "Environment :: Backend Environment",
-    "Intended Audience :: Developers",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python",
-    "Programming Language :: Python :: 2",
-    "Programming Language :: Python :: 2.6",
-    "Programming Language :: Python :: 2.7",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.2",
-    "Programming Language :: Python :: 3.3",
-    "Programming Language :: Python :: 3.4",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.9",
-    "Topic :: Internet :: WWW/TCP",
+authors = [
+    {name = "Henrique Mendes", email = "henrique.gmendes@hotmail.com"},
 ]
+description = "Test"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    'importlib-metadata; python_version>="3.9"',
+]
+dynamic = ["version"]
